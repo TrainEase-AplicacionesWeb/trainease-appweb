@@ -10,7 +10,8 @@
       <p><strong>Experience:</strong> {{ trainer.experience }} Years</p>
       <p><strong>Services Offered:</strong> {{ trainer.services }}</p>
       <p><strong>Price:</strong> ${{ trainer.price }}</p>
-      <Button label="Book Now" class="book-button"></Button>
+      
+      <a href="/routine" class="book-button">Ver Ejercicios</a>
     </div>
   </div>
 </template>
@@ -33,7 +34,7 @@ export default {
 <style scoped>
 .trainer-card {
     display: flex;
-    background-color: #f5f5f5;
+    background-color: #fff0c0;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     margin: 20px;
@@ -60,7 +61,7 @@ export default {
 
 .book-button {
     background-color: #007BFF;
-    color: white;
+    color: rgb(0, 0, 0);
     border: none;
     border-radius: 5px;
     cursor: pointer;
