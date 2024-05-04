@@ -28,13 +28,15 @@ export default {
     };
   },
   async created() {
-    try {
-      this.trainers = await TrainerService.getAllTrainers();
-      console.log('Datos de trainers:', this.trainer);
-    } catch (error) {
-      console.error('Error fetching trainers:', error);
-    }
+  try {
+    const trainersData = await TrainerService.getAllTrainers();
+    this.trainers = trainersData; // Asegúrate de que los datos están siendo asignados correctamente
+    console.log('Datos de trainers:', this.trainers);
+  } catch (error) {
+    console.error('Error fetching trainers:', error);
   }
+}
+
   
 }
 </script>
