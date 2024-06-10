@@ -7,15 +7,17 @@
     </template>
 
     <template #center>
-      <span class="p-input-icon-left" >
-        <i class="pi pi-search" />
-        <InputText placeholder="Search" />
-      </span>
+      <div class="search-container">
+        <span class="p-input-icon-left">
+          <i class="pi pi-search" />
+          <InputText placeholder="Search" />
+        </span>
+      </div>
     </template>
 
     <template #end>
-      <div class="flex align-items-center gap-2">
-        <a label="My Profile" href="/myprofile" class="profile-button">My Profile</a>
+      <div class="flex align-items-center gap-2 end-container">
+        <a href="/myprofile" class="profile-button">My Profile</a>
         <Avatar image="" class="profile-avatar" />
       </div>
     </template>
@@ -24,14 +26,12 @@
 
 <script>
 import Toolbar from 'primevue/toolbar';
-import Button from 'primevue/button';
 import InputText from 'primevue/inputtext';
 import Avatar from 'primevue/avatar';
 
 export default {
   components: {
     Toolbar,
-    Button,
     InputText,
     Avatar
   }
@@ -42,6 +42,12 @@ export default {
 .custom-toolbar {
   background-color: #212121; /* Dark gray background */
   color: #ffffff; /* Ensures text is white for contrast */
+  display: flex;
+  justify-content: space-between; /* Space between elements */
+  align-items: center; /* Align items vertically center */
+  width: 100%; /* Make toolbar full width */
+  max-width: 1200px; /* Maximum width, adjust as needed */
+  margin: 0 auto; /* Center the toolbar */
 }
 
 .logo-link {
@@ -56,16 +62,11 @@ export default {
   width: auto; /* O ajusta según tus necesidades de diseño */
   height: auto; /* Mantiene la proporción original del logo */
 }
-.profile-button {
-  background-color: #f0f0f0; /* Light gray for button */
-  color: #333333; /* Dark text color for button */
-  border: none; /* No border for a cleaner look */
-}
 
-.profile-avatar {
-  border-radius: 50%; /* Circular avatar */
-  width: 32px;
-  height: 32px;
+.search-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
 }
 
 .p-input-icon-left .pi {
@@ -76,5 +77,32 @@ export default {
   background-color: #333; /* Darker background for input */
   color: #fff; /* White text color for input */
   border: none; /* No border for input */
+}
+
+.end-container {
+  display: flex;
+  align-items: center;
+}
+
+.profile-button {
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 10px 20px; /* Aumenta el tamaño del botón */
+  text-decoration: none; /* Elimina el subrayado */
+  transition: background-color 0.3s ease; /* Transición suave */
+}
+
+.profile-button:hover {
+  background-color: #0056b3;
+}
+
+.profile-avatar {
+  border-radius: 50%; /* Circular avatar */
+  width: 32px;
+  height: 32px;
 }
 </style>
