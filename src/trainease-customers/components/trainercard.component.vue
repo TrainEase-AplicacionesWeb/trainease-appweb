@@ -1,4 +1,3 @@
-
 <template>
   <div class="trainer-card">
     <div class="photo-container">
@@ -10,65 +9,68 @@
       <p><strong>Experience:</strong> {{ trainer.experience }} Years</p>
       <p><strong>Services Offered:</strong> {{ trainer.services }}</p>
       <p><strong>Price:</strong> ${{ trainer.price }}</p>
-      
       <a href="/routine" class="book-button">Ver Ejercicios</a>
     </div>
   </div>
 </template>
 
 <script>
-
-import Button from 'primevue/button'; // Asegúrate de que 'Button' es exportado por PrimeVue
-
 export default {
-    name: 'TrainerCard',
-    components: {
-      Button
-    },
-    props: {
-      trainer: Object
-    }
+  name: 'TrainerCard',
+  props: {
+    trainer: Object
+  }
 }
 </script>
 
 <style scoped>
 .trainer-card {
-    display: flex;
-    background-color: #fff0c0;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    margin: 20px;
-    padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff0c0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px; /* Ajustado para el carrusel */
+  padding: 20px;
+  width: 300px; /* Ajusta el ancho de las tarjetas */
+  flex: 0 0 auto; /* Asegura que las tarjetas no se expandan */
 }
 
 .photo-container {
-    flex: 0 0 150px;
-    padding: 10px;
+  width: 100%;
+  padding: 10px;
 }
 
 .trainer-photo {
-    width: 100%;
-    border-radius: 50%;
-    border: 3px solid #ddd;
+  width: 100%;
+  height: auto; /* Mantiene la proporción de la imagen */
+  border-radius: 8px; /* Cambia a 8px para mantener la coherencia */
+  border: 3px solid #ddd;
 }
 
 .info-container {
-    flex: 1;
-    padding: 10px;
-    margin: 0 0 10px 0;
-    color: #333;
+  flex: 1;
+  padding: 10px;
+  margin: 10px 0;
+  color: #333;
+  text-align: center; /* Centra el texto */
 }
 
 .book-button {
-    background-color: #007BFF;
-    color: rgb(0, 0, 0);
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 10px 20px; /* Aumenta el tamaño del botón */
+  text-decoration: none; /* Elimina el subrayado */
+  transition: background-color 0.3s ease; /* Transición suave */
+  margin-top: 20px; /* Aumenta el espacio superior del botón */
 }
 
 .book-button:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
 }
 </style>

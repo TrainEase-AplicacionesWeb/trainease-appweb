@@ -1,6 +1,6 @@
 <template>
 
-<ToolbarComponent />
+  <ToolbarComponent />
 
   <div class="flex-container">
     <!-- FAQ Section in a Card -->
@@ -116,6 +116,7 @@ export default {
 
 <style scoped>
 .flex-container {
+  background-color: #000000;
   display: flex;
   flex-direction: row; /* Cambiado de columna a fila */
   justify-content: center;
@@ -125,7 +126,7 @@ export default {
 }
 
 .faq-container, .policy-container {
-  background-color: #fffde7;
+  
   border: 1px solid #ffc107;
   border-radius: 15px;
   padding: 20px;
