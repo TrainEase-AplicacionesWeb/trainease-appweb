@@ -1,6 +1,6 @@
 <template>
   <div class="form-container">
-    <img src="../../assets/Logo.svg" alt="">
+    <img src="//src/assets/Logo.svg" alt="">
     <p></p>
     <form @submit.prevent="submitForm">
       <div class="p-field">
