@@ -152,4 +152,3 @@ export default {
   background-color: #e0a800; /* Color más oscuro al pasar el mouse */
 }
 </style>
-Explicación de lo
