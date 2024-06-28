@@ -2,7 +2,7 @@
   <Toolbar class="custom-toolbar">
     <template #start>
       <a href="/home" class="logo-link">
-        <img src="../../assets/Logo.svg" alt="TrainEase Logo" class="logo-image">
+        <img src="//src/assets/Logo.svg" alt="TrainEase Logo" class="logo-image">
       </a>
     </template>
 
