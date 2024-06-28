@@ -5,6 +5,7 @@ import signin from '../public/pages/signin.vue'
 import routines from '../trainease-customers/pages/routines.vue';
 import myprofile from '../trainease-customers/pages/myprofile.vue';
 import FAQ from '../trainease-customers/pages/faq.vue';
+import schedule from '../trainease-customers/pages/schedule.vue'
 
 const routes = [
     { path: '/', component: login },
@@ -12,7 +13,8 @@ const routes = [
     { path: '/home', component: home },
     { path: '/routine', component: routines},
     { path: '/myprofile', component: myprofile},
-    { path: '/FAQ', component: FAQ}
+    { path: '/FAQ', component: FAQ},
+    { path: '/schedule', component: schedule},
 ];
 
 const router = createRouter({
